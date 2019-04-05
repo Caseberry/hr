@@ -72,23 +72,24 @@
         $('.modal.show').modal('hide');
     });
 
-    var setModalSendContent = function (title=undefined) {
+    var setModalSendContent = function (isBtn=false, title=undefined) {
       if (title === undefined) {
         var linkTxt = "Вернуться";
-        var selectVal = "Другое"
+        var selectVal = isBtn ? "Junior-разработчик" : "Другое"
       } else {
         var linkTxt = "Вернуться к вакансии " + title;
         var selectVal = title;
       }
 
       $("#send-modal #back-to-modal").text(linkTxt);
-      $("#send-modal .c-choice-dropdown select").val(selectVal);
+      $("#send-modal .c-choice-dropdown select").val(selectVal).change();
+      $("#send-modal .c-choice-dropdown select").trigger("click");
     };
 
     $(document).on("click", ".btn-primary", function () {
       $("#otherTxt").css("display", "none");
       var title = $(this).data('title');
-      setModalSendContent(title);
+      setModalSendContent(true, title);
     });
 
     $(document).on("click", "#otherVac", function () {

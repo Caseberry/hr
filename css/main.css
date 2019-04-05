@@ -658,12 +658,16 @@ p {
   background-repeat: no-repeat; }
 
 .nums {
-  font-size: 80px;
-  line-height: 1.3;
   margin-bottom: 2.4rem;
   display: flex; }
   .nums > div {
-    display: grid; }
+    margin-right: 50px;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px; }
+  .nums > div > div {
+    font-size: 80px;
+    line-height: 1.3; }
 
 .modal:not(.mini) {
   background: #f4f4f4; }
@@ -969,6 +973,14 @@ select:focus {
 .cognito .c-button-section {
   padding: 0 !important; }
 
+.cognito .c-forms-form .c-forms-confirmation-message {
+  padding-left: 0 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Exo 2", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  color: #3E3E3E !important;
+  font-size: 1rem !important; }
+  .cognito .c-forms-form .c-forms-confirmation-message p {
+    font-size: 1rem !important; }
+
 @media (min-width: 992px) {
   .nav-close {
     display: none; }
@@ -1015,9 +1027,6 @@ select:focus {
     width: 70px;
     height: 70px; }
 
-  .nums {
-    font-size: 80px; }
-
   #about {
     background-position: 110% 30%;
     background-size: 35%; }
@@ -1031,9 +1040,6 @@ select:focus {
   #vacancy .row {
     max-width: 780px;
     padding: 0 12px; }
-
-  .vacancy-item {
-    padding: 30px 20px; }
 
   .slick-slide img {
     height: 197px; } }
@@ -1051,7 +1057,10 @@ select:focus {
     width: 50px;
     height: 50px; }
 
-  .nums {
+  .nums > div {
+    text-align: left; }
+
+  .nums > div > div {
     font-size: 42px; }
 
   .modal .modal-dialog {
