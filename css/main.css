@@ -1132,14 +1132,18 @@ select:focus {
   .cognito .c-forms-form-main {
     max-width: 100%; } }
 @media (max-width: 768px) {
-  .nextArrow {
-    display: none !important; }
-
   .slick-slider {
     padding-right: 0; }
 
   .cognito .c-forms-form-main {
     column-count: 1; } }
+@media (max-width: 575px) {
+  #about .btn-primary {
+    display: block;
+    margin-bottom: 1rem; }
+
+  .nav-vac {
+    margin-left: 0 !important; } }
 .col-2dot4 {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 20%;
